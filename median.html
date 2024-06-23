@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find median of two sorted array</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //Anonymous function
+        var findMedain = function(arr1,arr2){
+          var mergeArray = arr1.concat(arr2);
+          mergeArray =  mergeArray.sort((a, b) => a - b);
+          var middleEle= Math.floor((mergeArray.length -1)/2);
+          //check whether there is mid elem or not
+
+          if(mergeArray.length%2){
+            return mergeArray[middleEle];
+          }
+          else{
+            return (mergeArray[middleEle] + mergeArray[middleEle + 1])/2;
+          }
+        }
+        var array1 = [1, 12, 15, 26, 38]
+        var array2 = [2, 13, 17, 30]
+      var result =  findMedain(array1,array2);
+      console.log("Median using Anonymous function : " + result);
+
+      //IIFE function
+
+      (function(arr1,arr2){
+          var mergeArray = arr1.concat(arr2);
+          mergeArray =  mergeArray.sort((a, b) => a - b);
+          var middleEle= Math.floor((mergeArray.length -1)/2);
+          //check whether there is mid elem or not
+
+          if(mergeArray.length%2){
+            var result1 = mergeArray[middleEle];
+            console.log("Median using IIFE function : " +result1) ;
+          }
+          else{
+            result1 = (mergeArray[middleEle] + mergeArray[middleEle + 1])/2;
+            console.log("Median using IIFE function : " + result1) ;
+          }
+        })([1,2,3,4,5],[6,7,8,9,10])
+
+        // Arror function
+
+        medianSort = (arr1,arr2) =>{
+          var mergeArray = arr1.concat(arr2);
+          mergeArray =  mergeArray.sort((a, b) => a - b);
+          var middleEle= Math.floor((mergeArray.length -1)/2);
+          //check whether there is mid elem or not
+
+          if(mergeArray.length%2){
+            var result2 = mergeArray[middleEle];
+            console.log("Median using Arrow function : " + result2) ;
+          }
+          else{
+            result2 = (mergeArray[middleEle] + mergeArray[middleEle + 1])/2;
+            console.log("Median using Arrow function : " + result2) ;
+          }
+        }
+        medianSort([12,14,16,18],[,13,15,17,19])
+
+    </script>
+</html>

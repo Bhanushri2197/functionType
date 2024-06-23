@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display odd number</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+         var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+         // Anonymous function
+         var oddNum = function(){
+            oddNumbers = [];
+            for(i=0;i<arr.length;i++){
+                if(arr[i] % 2 != 0){
+                    oddNumbers.push(arr[i]);                    
+                }
+            }
+            console.log("The Odd numbers in given array using anonymous function is: " + oddNumbers)
+         }
+         oddNum(arr);
+         
+
+         // IIFE function
+
+        (function(arr2){
+            oddNumbersIIF = [];
+            for(i=0;i<arr2.length;i++){
+                if(arr2[i]% 2 != 0){
+                    oddNumbersIIF.push(arr2[i]);                    
+                }
+            }
+            console.log("The Odd numbers in given array using IIFE function is: " + oddNumbersIIF)
+         })([16,17,18,19,20,21,22,23,24,25,26,27,28,29,30])
+     
+         // Arrow function
+
+         findOddNum = (arr) => {
+            oddNumbersIIF1 = [];
+            for(i=0;i<arr.length;i++){
+                if(arr[i]% 2 != 0){
+                    oddNumbersIIF1.push(arr[i]);                    
+                }
+            }
+            console.log("The Odd numbers in given array using Arrow function is: " + oddNumbersIIF1)
+         }
+         findOddNum([11,21,14,15,16,77,54,55])
+    </script>
+</html>
