@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display odd number</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+         var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+         // Anonymous function
+         var oddNum = function(){
+            oddNumbers = [];
+            for(i=0;i<arr.length;i++){
+                if(arr[i] % 2 != 0){
+                    oddNumbers.push(arr[i]);                    
+                }
+            }
+            console.log("The Odd numbers in given array using anonymous function is: " + oddNumbers)
+         }
+         oddNum(arr);
+        
+    </script>
+</html>

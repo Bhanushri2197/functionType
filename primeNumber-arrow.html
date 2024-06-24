@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display prime number in given array</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+    // Arrow function 
+
+          findPrime = (numArray) =>{
+              numArray = numArray.filter((number) => {
+                for (var i = 2; i <= Math.sqrt(number); i++) {
+                  if (number % i === 0) return false;
+                }
+                return true;
+              });
+              console.log(numArray);
+          }
+          findPrime([3,4,5,13,18,20])
+    </script>
+</html>

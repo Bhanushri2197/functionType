@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find median of two sorted array</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+       
+      //IIFE function
+
+      (function(arr1,arr2){
+          var mergeArray = arr1.concat(arr2);
+          mergeArray =  mergeArray.sort((a, b) => a - b);
+          var middleEle= Math.floor((mergeArray.length -1)/2);
+          //check whether there is mid elem or not
+
+          if(mergeArray.length%2){
+            var result1 = mergeArray[middleEle];
+            console.log("Median using IIFE function : " +result1) ;
+          }
+          else{
+            result1 = (mergeArray[middleEle] + mergeArray[middleEle + 1])/2;
+            console.log("Median using IIFE function : " + result1) ;
+          }
+        })([1,2,3,4,5],[6,7,8,9,10])      
+
+    </script>
+</html>

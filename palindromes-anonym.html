@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Print Palindromes in array</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //Anonymous function
+        var findPalindrom = function(arr){            
+            for(i=0;i<arr.length;i++){
+                var reverse = "";
+                var str = arr[i];
+                for(j=str.length - 1;j>=0;j--){                    
+                reverse = reverse + str[j];                
+            }
+            if(reverse == str){
+                console.log(str + " is palindrome");                
+            }
+            else{
+                console.log(str+ " is not a palindrome")
+            }            
+            }
+        }
+        var arr = ["amma","king","malayalam"]
+        findPalindrom(arr);
+
+    </script>
+</html>

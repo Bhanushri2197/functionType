@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<htmml>
+    <head>
+        <title>Print sum of all number in array</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+
+         //IIFE function
+
+         (function(arr1){        
+           var sum = 0;
+           for(i=0;i<arr1.length;i++){
+             sum = sum + arr1[i];
+           }
+           console.log("The sum of numbers in array using IIFE function.The array: [" + arr1 + "] is: " + sum)
+         })([1,4,3,2,5,6,4]);
+
+    </script>
+</htmml>

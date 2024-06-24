@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rotate array K times</title>
+        <body>
+            
+        </body>
+        <script>
+            // this reverse function is common for both anonymous and iife function
+
+            function reverse(arr, start, end) {
+                while (start < end) {
+                    // Swap elements at start and end indices
+                    let temp = arr[start];
+                    arr[start] = arr[end];
+                    arr[end] = temp;
+                    start++;
+                    end--;
+                }            
+            }
+
+            // IIFE function
+
+         (function(arr,k){
+                k = k % arr.length;
+                if(k<0){
+                    k = k + arr.length;
+                }
+                reverse(arr,0,arr.length - k - 1);
+                reverse(arr,arr.length -k, arr.length - 1);
+                reverse(arr,0,arr.length - 1);
+                console.log("This array rotate using IIFE function: " + arr);
+            })([10,11,12,13,14,15], 3)
+        </script>
+    </head>
+</html>

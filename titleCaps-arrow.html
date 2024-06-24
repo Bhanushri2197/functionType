@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display the string in title case</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+      //Arrow function 
+
+        changeTitleCase = (string1) =>{
+            var titleCase1 = string1.toLowerCase().split(" ");
+            var totalString = []
+            for(i=0;i<titleCase1.length;i++){
+             var changeCase = titleCase1[i].charAt(0).toUpperCase() + titleCase1[i].slice(1);
+             totalString.push(changeCase);
+            }
+            console.log(totalString.join(" "));
+        };
+        changeTitleCase("Hi! this is bhanushri, thank you.")
+    </script>
+</html>

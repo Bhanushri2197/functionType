@@ -35,18 +35,6 @@
             rotateArray(arr1,2);
             console.log("This array rotate using Anonymous function: " + arr1);
 
-            // IIFE function
-
-         (function(arr,k){
-                k = k % arr.length;
-                if(k<0){
-                    k = k + arr.length;
-                }
-                reverse(arr,0,arr.length - k - 1);
-                reverse(arr,arr.length -k, arr.length - 1);
-                reverse(arr,0,arr.length - 1);
-                console.log("This array rotate using IIFE function: " + arr);
-            })([10,11,12,13,14,15], 3)
         </script>
     </head>
 </html>

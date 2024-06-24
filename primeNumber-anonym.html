@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display prime number in given array</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //  Anonymous function
+        var arr = [1,4,5,10,17,20,21,23];
+        var primeNumber = function(arr){
+            arr = arr.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(arr);
+        }
+        primeNumber(arr);
+       
+    </script>
+</html>
